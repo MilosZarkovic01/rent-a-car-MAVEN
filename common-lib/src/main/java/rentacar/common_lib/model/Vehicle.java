@@ -84,6 +84,9 @@ public class Vehicle implements Serializable {
 	}
 
 	public void setTypeOfVehicle(TypeOfVehicle typeOfVehicle) {
+		if(typeOfVehicle == null) {
+			throw new NullPointerException("Type of vehicle cannot be null.");
+		}
 		this.typeOfVehicle = typeOfVehicle;
 	}
 
