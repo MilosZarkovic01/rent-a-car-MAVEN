@@ -19,7 +19,6 @@ import java.net.Socket;
  * 
  * The Sender class assumes that the socket has already been established and is
  * ready for communication.
- * </p>
  * 
  * 
  * @author Somika
