@@ -8,101 +8,180 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ * 
+ * The Administrator class represents an administrator in the system.
+ * 
+ * It stores information such as ID, username, password, and email.
+ * 
  * @author Somika
  */
-public class Administrator implements Serializable{
+public class Administrator implements Serializable {
 
-    private Long id;
-    private String username;
-    private String password;
-    private String email;
+	private Long id;
+	private String username;
+	private String password;
+	private String email;
 
-    public Administrator() {
-    }
+	/**
+	 * 
+	 * Constructs an empty Administrator object.
+	 */
+	public Administrator() {
+	}
 
-    public Administrator(Long id, String username, String password, String email) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.email = email;
-    }
+	/**
+	 * 
+	 * Constructs an Administrator object with the specified ID, username, password,
+	 * and email.
+	 * 
+	 * @param id       the ID of the administrator
+	 * @param username the username of the administrator
+	 * @param password the password of the administrator
+	 * @param email    the email of the administrator
+	 */
+	public Administrator(Long id, String username, String password, String email) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	/**
+	 * 
+	 * Returns the ID of the administrator.
+	 * 
+	 * @return the ID of the administrator
+	 */
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	/**
+	 * 
+	 * Sets the ID of the administrator.
+	 * 
+	 * @param id the ID to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	/**
+	 * 
+	 * Returns the username of the administrator.
+	 * 
+	 * @return the username of the administrator
+	 */
+	public String getUsername() {
+		return username;
+	}
 
-    public void setUsername(String username) {
-        if (username == null) {
-            throw new NullPointerException("Username cannot be null.");
-        }
-        if (username.isEmpty()) {
-            throw new IllegalArgumentException("Username cannot be empty.");
-        }
-        this.username = username;
-    }
+	/**
+	 * 
+	 * Sets the username of the administrator.
+	 * 
+	 * @param username the username to set
+	 * @throws NullPointerException     if the username is null
+	 * @throws IllegalArgumentException if the username is empty
+	 */
+	public void setUsername(String username) {
+		if (username == null) {
+			throw new NullPointerException("Username cannot be null.");
+		}
+		if (username.isEmpty()) {
+			throw new IllegalArgumentException("Username cannot be empty.");
+		}
+		this.username = username;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	/**
+	 * 
+	 * Returns the password of the administrator.
+	 * 
+	 * @return the password of the administrator
+	 */
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(String password) {
-        if (password == null) {
-            throw new NullPointerException("Password cannot be null.");
-        }
-        if (password.isEmpty()) {
-            throw new IllegalArgumentException("Password cannot be empty.");
-        }
-        this.password = password;
-    }
-    public String getEmail() {
-        return email;
-    }
+	/**
+	 * 
+	 * Sets the password of the administrator.
+	 * 
+	 * @param password the password to set
+	 * @throws NullPointerException     if the password is null
+	 * @throws IllegalArgumentException if the password is empty
+	 */
+	public void setPassword(String password) {
+		if (password == null) {
+			throw new NullPointerException("Password cannot be null.");
+		}
+		if (password.isEmpty()) {
+			throw new IllegalArgumentException("Password cannot be empty.");
+		}
+		this.password = password;
+	}
 
-    public void setEmail(String email) {
-        if (email == null) {
-            throw new NullPointerException("Email cannot be null.");
-        }
-        if (email.isEmpty()) {
-            throw new IllegalArgumentException("Email cannot be empty.");
-        }
-        this.email = email;
-    }
+	/**
+	 * 
+	 * Returns the email of the administrator.
+	 * 
+	 * @return the email of the administrator
+	 */
+	public String getEmail() {
+		return email;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
-    }
+	/**
+	 * 
+	 * Sets the email of the administrator.
+	 * 
+	 * @param email the email to set
+	 * @throws NullPointerException     if the email is null
+	 * @throws IllegalArgumentException if the email is empty
+	 */
+	public void setEmail(String email) {
+		if (email == null) {
+			throw new NullPointerException("Email cannot be null.");
+		}
+		if (email.isEmpty()) {
+			throw new IllegalArgumentException("Email cannot be empty.");
+		}
+		this.email = email;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Administrator other = (Administrator) obj;
-        return Objects.equals(this.id, other.id);
-    }
+	@Override
+	public int hashCode() {
+		int hash = 7;
+		return hash;
+	}
 
-    
+	/**
+	 * Checks if the administrator is equal to another object.
+	 *
+	 * @param obj the object to compare
+	 * @return true if the administrator is equal to the other object, false
+	 *         otherwise
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final Administrator other = (Administrator) obj;
+		return Objects.equals(this.id, other.id);
+	}
 
-    @Override
-    public String toString() {
-        return "Administrator{" + "id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + '}';
-    }
+	@Override
+	public String toString() {
+		return "Administrator{" + "id=" + id + ", username=" + username + ", password=" + password + ", email=" + email
+				+ '}';
+	}
 
 }

@@ -8,41 +8,84 @@ import rentacar.common_lib.model.enumeration.Operation;
 import java.io.Serializable;
 
 /**
- *
+ * 
+ * The Request class represents a communication request that includes an
+ * operation and data.
+ * 
+ * It is used for sending requests between client and server in a serialized
+ * form.
+ * 
+ * The operation specifies the type of operation to be performed, and the data
+ * holds the relevant information or parameters for the operation.
+ * 
+ * The Request class implements the Serializable interface, allowing objects of
+ * this class to be serialized and deserialized for communication purposes.
+ * 
  * @author Somika
  */
 public class Request implements Serializable {
 
-    private Operation operation;
-    private Object data;
+	private Operation operation;
+	private Object data;
 
-    public Request() {
-    }
+	public Request() {
+	}
 
-    public Request(Operation operation, Object data) {
-        this.operation = operation;
-        this.data = data;
-    }
+	/**
+	 * 
+	 * Constructs a Request object with the specified operation and data.
+	 * 
+	 * @param operation the operation to be performed
+	 * @param data      the data associated with the operation
+	 */
+	public Request(Operation operation, Object data) {
+		this.operation = operation;
+		this.data = data;
+	}
 
-    public Operation getOperation() {
-        return operation;
-    }
+	/**
+	 * 
+	 * Retrieves the operation of the request.
+	 * 
+	 * @return the operation of the request
+	 */
+	public Operation getOperation() {
+		return operation;
+	}
 
-    public void setOperation(Operation operation) {
-        this.operation = operation;
-    }
+	/**
+	 * 
+	 * Sets the operation of the request.
+	 * 
+	 * @param operation the operation to be set
+	 */
+	public void setOperation(Operation operation) {
+		this.operation = operation;
+	}
 
-    public Object getData() {
-        return data;
-    }
+	/**
+	 * 
+	 * Retrieves the data of the request.
+	 * 
+	 * @return the data of the request
+	 */
+	public Object getData() {
+		return data;
+	}
 
-    public void setData(Object data) {
-        this.data = data;
-    }
+	/**
+	 * 
+	 * Sets the data of the request.
+	 * 
+	 * @param data the data to be set
+	 */
+	public void setData(Object data) {
+		this.data = data;
+	}
 
 	@Override
 	public String toString() {
 		return "Request [operation=" + operation + ", data=" + data + "]";
 	}
-    
+
 }

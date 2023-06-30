@@ -11,95 +11,168 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *
+ * 
+ * The PriceList class represents a price list with a valid period and a list of
+ * price list items.
+ * 
+ * It contains the ID, valid from date, valid to date, and a list of price list
+ * items.
+ * 
  * @author Somika
  */
-public class PriceList implements Serializable{
+public class PriceList implements Serializable {
 
-    private Long id;
-    private LocalDate validFrom;
-    private LocalDate validTo;
-    private List<PriceListItem> priceListItems;
+	private Long id;
+	private LocalDate validFrom;
+	private LocalDate validTo;
+	private List<PriceListItem> priceListItems;
 
-    public PriceList() {
-        this.priceListItems = new ArrayList<>();
-    }
+	/**
+	 * 
+	 * Constructs an empty PriceList object with an empty list of price list items.
+	 */
+	public PriceList() {
+		this.priceListItems = new ArrayList<>();
+	}
 
-    public PriceList(Long id, LocalDate validFrom, LocalDate validTo) {
-        this.id = id;
-        this.validFrom = validFrom;
-        this.validTo = validTo;
-        this.priceListItems = new ArrayList<>();
-    }
+	/**
+	 * 
+	 * Constructs a PriceList object with the specified ID, valid from date, valid
+	 * to date, and an empty list of price list items.
+	 * 
+	 * @param id        the ID of the price list
+	 * @param validFrom the valid from date of the price list
+	 * @param validTo   the valid to date of the price list
+	 */
+	public PriceList(Long id, LocalDate validFrom, LocalDate validTo) {
+		this.id = id;
+		this.validFrom = validFrom;
+		this.validTo = validTo;
+		this.priceListItems = new ArrayList<>();
+	}
 
-    public Long getId() {
-        return id;
-    }
+	/**
+	 * 
+	 * Returns the ID of the price list.
+	 * 
+	 * @return the ID of the price list
+	 */
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	/**
+	 * 
+	 * Sets the ID of the price list.
+	 * 
+	 * @param id the ID to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public LocalDate getDateFrom() {
-        return validFrom;
-    }
+	/**
+	 * 
+	 * Returns the valid from date of the price list.
+	 * 
+	 * @return the valid from date of the price list
+	 */
+	public LocalDate getDateFrom() {
+		return validFrom;
+	}
 
-    public void setDateFrom(LocalDate validFrom) {
-        if (validFrom == null) {
-            throw new NullPointerException("Valid from date cannot be null.");
-        }
-        this.validFrom = validFrom;
-    }
+	/**
+	 * 
+	 * Sets the valid from date of the price list.
+	 * 
+	 * @throws NullPointerException if valid from is null
+	 * @param validFrom the valid from date to set
+	 */
+	public void setDateFrom(LocalDate validFrom) {
+		if (validFrom == null) {
+			throw new NullPointerException("Valid from date cannot be null.");
+		}
+		this.validFrom = validFrom;
+	}
 
-    public LocalDate getDateTo() {
-        return validTo;
-    }
+	/**
+	 * 
+	 * Returns the valid to date of the price list.
+	 * 
+	 * @return the valid to date of the price list
+	 */
+	public LocalDate getDateTo() {
+		return validTo;
+	}
 
-    public void setDateTo(LocalDate validTo) {
-        if (validTo == null) {
-            throw new NullPointerException("Valid to date cannot be null.");
-        }
-        if (validTo.isBefore(validFrom)) {
-            throw new IllegalArgumentException("Valid to date cannot be before valid from date.");
-        }
-        this.validTo = validTo;
-    }
+	/**
+	 * 
+	 * Sets the valid to date of the price list.
+	 * 
+	 * @param validTo the valid to date to set
+	 * @throws NullPointerException     if valid to is null
+	 * @throws IllegalArgumentException if the valid to date is before the valid
+	 *                                  from date
+	 */
+	public void setDateTo(LocalDate validTo) {
+		if (validTo == null) {
+			throw new NullPointerException("Valid to date cannot be null.");
+		}
+		if (validTo.isBefore(validFrom)) {
+			throw new IllegalArgumentException("Valid to date cannot be before valid from date.");
+		}
+		this.validTo = validTo;
+	}
 
-    public List<PriceListItem> getPriceListItems() {
-        return priceListItems;
-    }
+	/**
+	 * 
+	 * Returns the list of price list items.
+	 * 
+	 * @return the list of price list items
+	 */
+	public List<PriceListItem> getPriceListItems() {
+		return priceListItems;
+	}
 
-    public void setPriceListItems(List<PriceListItem> priceListItems) {
-        if (priceListItems == null) {
-            throw new NullPointerException("Price list items cannot be null.");
-        }
-        this.priceListItems = priceListItems;
-    }
+	/**
+	 * 
+	 * Sets the list of price list items.
+	 * 
+	 * @param priceListItems the list of price list items to set
+	 * @throws NullPointerException if the list of price list items is null
+	 */
+	public void setPriceListItems(List<PriceListItem> priceListItems) {
+		if (priceListItems == null) {
+			throw new NullPointerException("Price list items cannot be null.");
+		}
+		this.priceListItems = priceListItems;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
-    }
+	@Override
+	public int hashCode() {
+		int hash = 7;
+		return hash;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final PriceList other = (PriceList) obj;
-        return Objects.equals(this.id, other.id);
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final PriceList other = (PriceList) obj;
+		return Objects.equals(this.id, other.id);
+	}
 
-    @Override
-    public String toString() {
-        return "PriceList{" + "id=" + id + ", validFrom=" + validFrom + ", validTo=" + validTo + ", priceListItems=" + priceListItems + '}';
-    }
+	@Override
+	public String toString() {
+		return "PriceList{" + "id=" + id + ", validFrom=" + validFrom + ", validTo=" + validTo + ", priceListItems="
+				+ priceListItems + '}';
+	}
 
 }

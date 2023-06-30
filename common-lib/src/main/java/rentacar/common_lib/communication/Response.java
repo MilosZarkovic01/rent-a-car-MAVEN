@@ -7,37 +7,84 @@ package rentacar.common_lib.communication;
 import java.io.Serializable;
 
 /**
- *
+ * 
+ * The Response class represents a communication response that includes a result
+ * or an exception.
+ * 
+ * It is used for sending responses between client and server in a serialized
+ * form.
+ * 
+ * The result holds the response data or the result of the requested operation,
+ * while the exception represents any exception that occurred during the
+ * processing of the request.
+ * 
+ * The Response class implements the Serializable interface, allowing objects of
+ * this class to be serialized and deserialized for communication purposes.
+ * </p>
+ * 
+ * 
  * @author Somika
  */
 public class Response implements Serializable {
 
-    private Object result;
-    private Exception exception;
+	private Object result;
+	private Exception exception;
 
-    public Response() {
-    }
+	public Response() {
+	}
 
-    public Response(Object result, Exception exception) {
-        this.result = result;
-        this.exception = exception;
-    }
+	/**
+	 * 
+	 * Constructs a Response object with the specified result and exception.
+	 * 
+	 * @param result    the result or response data
+	 * @param exception the exception that occurred during processing, or null if no
+	 *                  exception occurred
+	 */
+	public Response(Object result, Exception exception) {
+		this.result = result;
+		this.exception = exception;
+	}
 
-    public Object getResult() {
-        return result;
-    }
+	/**
+	 * 
+	 * Retrieves the result of the response.
+	 * 
+	 * @return the result of the response
+	 */
+	public Object getResult() {
+		return result;
+	}
 
-    public void setResult(Object result) {
-        this.result = result;
-    }
+	/**
+	 * 
+	 * Sets the result of the response.
+	 * 
+	 * @param result the result to be set
+	 */
+	public void setResult(Object result) {
+		this.result = result;
+	}
 
-    public Exception getException() {
-        return exception;
-    }
+	/**
+	 * 
+	 * Retrieves the exception of the response.
+	 * 
+	 * @return the exception of the response
+	 */
+	public Exception getException() {
+		return exception;
+	}
 
-    public void setException(Exception exception) {
-        this.exception = exception;
-    }
+	/**
+	 * 
+	 * Sets the exception of the response.
+	 * 
+	 * @param exception the exception to be set
+	 */
+	public void setException(Exception exception) {
+		this.exception = exception;
+	}
 
 	@Override
 	public String toString() {
