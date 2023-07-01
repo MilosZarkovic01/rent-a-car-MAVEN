@@ -25,7 +25,7 @@ public class DatabaseConfiguration {
     private DatabaseConfiguration() {
         try {
             properties = new Properties();
-            properties.load(new FileInputStream("server/config/dbconfig.properties"));
+            properties.load(new FileInputStream("../server/config/dbconfig.properties"));
         } catch (Exception ex) {
             Logger.getLogger(DatabaseConfiguration.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -45,7 +45,7 @@ public class DatabaseConfiguration {
     public void setUrl(String url) {
         try {
             properties.setProperty("url", url);
-            properties.store(new FileOutputStream(new File("server/config/dbconfig.properties")), null);
+            properties.store(new FileOutputStream(new File("../server/config/dbconfig.properties")), null);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DatabaseConfiguration.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -56,7 +56,7 @@ public class DatabaseConfiguration {
     public void setUsername(String user) {
         try {
             properties.setProperty("username", user);
-            properties.store(new FileOutputStream(new File("server/config/dbconfig.properties")), null);
+            properties.store(new FileOutputStream(new File("../server/config/dbconfig.properties")), null);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DatabaseConfiguration.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -67,7 +67,7 @@ public class DatabaseConfiguration {
     public void setPassword(String password) {
         try {
             properties.setProperty("password", password);
-            properties.store(new FileOutputStream(new File("server/config/dbconfig.properties")), null);
+            properties.store(new FileOutputStream(new File("../server/config/dbconfig.properties")), null);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DatabaseConfiguration.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {

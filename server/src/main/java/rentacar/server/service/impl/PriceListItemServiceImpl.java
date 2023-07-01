@@ -8,10 +8,10 @@ import rentacar.common_lib.model.TypeOfVehicle;
 import rentacar.server.persistence.dao.PriceListItemDao;
 import rentacar.server.service.PriceListItemService;
 
-public class PriceLisItemServiceImpl implements PriceListItemService{
+public class PriceListItemServiceImpl implements PriceListItemService{
 	private final PriceListItemDao priceListItemDao;
 
-	public PriceLisItemServiceImpl(PriceListItemDao priceListItemDao) {
+	public PriceListItemServiceImpl(PriceListItemDao priceListItemDao) {
 		this.priceListItemDao = priceListItemDao;
 	}
 
