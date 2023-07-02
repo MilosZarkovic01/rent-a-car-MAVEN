@@ -27,6 +27,7 @@ public class Request implements Serializable {
 
 	private Operation operation;
 	private Object data;
+	private Object data2;
 
 	public Request() {
 	}
@@ -81,6 +82,26 @@ public class Request implements Serializable {
 	 */
 	public void setData(Object data) {
 		this.data = data;
+	}
+
+	/**
+	 * 
+	 * Retrieves the data2 of the request.
+	 * 
+	 * @return the data of the request
+	 */
+	public Object getData2() {
+		return data2;
+	}
+
+	/**
+	 * 
+	 * Sets the data2 of the request.
+	 * 
+	 * @param data the data to be set
+	 */
+	public void setData2(Object data2) {
+		this.data2 = data2;
 	}
 
 	@Override

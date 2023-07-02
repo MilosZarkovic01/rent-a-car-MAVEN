@@ -100,7 +100,7 @@ public class ClientThread extends Thread {
                             response.setResult(Controller.getInstance().getAllRentings());
                             break;
                         case GET_PRICE_LIST_ITEMS:
-                            //response.setResult(Controller.getInstance().getPriceListItems((TypeOfVehicle) request.getData(), (Date) request.getData2()));
+                            response.setResult(Controller.getInstance().getPriceListItems((TypeOfVehicle) request.getData(), (Date) request.getData2()));
                             break;
                         case ADD_RENTING:
                             Controller.getInstance().addRenting((Renting) request.getData());
@@ -109,7 +109,7 @@ public class ClientThread extends Thread {
                             Controller.getInstance().deleteRenting((Renting) request.getData());
                             break;
                         case UPDATE_RENTING:
-                           // Controller.getInstance().updateRenting((Long) request.getData(), (BigDecimal) request.getData2());
+                           Controller.getInstance().updateRenting((Long) request.getData(), (BigDecimal) request.getData2());
                             break;
                         case GET_ALL_PDVS:
                             response.setResult(Controller.getInstance().getAllPDVs());

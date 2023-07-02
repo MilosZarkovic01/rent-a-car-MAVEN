@@ -14,7 +14,8 @@ public class AdministatorServiceImpl implements AdministatorService {
 
 	@Override
 	public Administrator login(String username, String password) {
-		return adminDao.getAdminByUsernameAndPassword(username, password);
+		Administrator admin = adminDao.getAdminByUsernameAndPassword(username, password);
+		return admin;
 	}
 
 }
