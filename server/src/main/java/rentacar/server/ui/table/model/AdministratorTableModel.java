@@ -36,6 +36,8 @@ public class AdministratorTableModel extends AbstractTableModel {
     @Override
     public Object getValueAt(int row, int column) {
         Administrator a = users.get(row);
+        if(a == null )
+        	return "";
         switch (column) {
             case 0:
                 return a.getUsername();

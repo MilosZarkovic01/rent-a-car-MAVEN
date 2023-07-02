@@ -74,7 +74,6 @@ public class Controller {
 	public Administrator login(String username, String password) throws Exception {
 		Administrator admin = ((AdministatorService) ServiceProvider.getInstance()
 				.getRequiredService(AdministatorService.class)).login(username, password);
-		System.out.println(admin);
 		return admin;
 	}
 
