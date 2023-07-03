@@ -53,7 +53,7 @@ public class ServerThread extends Thread {
                 client.getSocket().close();
             }
             clients = new ArrayList<>();
-            //Controller.getInstance().setActiveAdmins(new ArrayList<>());
+            Controller.getInstance().setActiveAdmins(new ArrayList<ClientThread>());
             serverRunning = false;
             serverSocket.close();
             Controller.getInstance().getMainForm().prepareTable();

@@ -17,6 +17,5 @@ public class Start {
 	public static void main(String[] args) {
 		FlatLightLaf.setup();
 		new FrmLogin().setVisible(true);
-
 	}
 }
