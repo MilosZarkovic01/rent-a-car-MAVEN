@@ -7,6 +7,8 @@ package rentacar.common_lib.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * 
  * The Client class represents a client in the car rental system.
@@ -188,6 +190,7 @@ public class Client implements Serializable {
 	 *
 	 * @return true if the Client object is empty, false otherwise
 	 */
+	@JsonIgnore
 	public boolean isEmpty() {
 		return id == null && firstName == null && lastName == null && telNumber == null;
 	}
