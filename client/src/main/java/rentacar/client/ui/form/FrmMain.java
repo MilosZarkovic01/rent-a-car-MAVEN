@@ -132,7 +132,7 @@ public class FrmMain extends javax.swing.JFrame {
 	}// GEN-LAST:event_jMenu2MouseClicked
 
 	private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jMenu3MouseClicked
-		new FrmRenting().setVisible(true);
+		new FrmAddRenting().setVisible(true);
 	}// GEN-LAST:event_jMenu3MouseClicked
 
 	private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jMenu4MouseClicked
