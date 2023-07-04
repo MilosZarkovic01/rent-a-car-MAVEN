@@ -17,4 +17,5 @@ public interface RentingDao {
     void add (Renting renting) throws Exception;
     void delete(Renting renting) throws Exception;
     void updatePrice(Long id, BigDecimal newPrice) throws Exception;
+	Renting getById(Long id) throws Exception;
 }
