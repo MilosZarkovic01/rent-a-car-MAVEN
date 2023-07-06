@@ -17,9 +17,24 @@ import java.util.Objects;
  */
 public class Administrator implements Serializable {
 
+	/**
+	 * The unique identifier for the administrator.
+	 */
 	private Long id;
+	/**
+	 * The username of the administrator.
+	 */
+
 	private String username;
+	/**
+	 * The password of the administrator.
+	 */
+
 	private String password;
+	/**
+	 * The email address of the administrator.
+	 */
+
 	private String email;
 
 	/**

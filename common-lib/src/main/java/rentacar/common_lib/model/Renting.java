@@ -27,13 +27,44 @@ import rentacar.common_lib.model.enumeration.Currency;
  */
 public class Renting implements Serializable {
 
+	/**
+	 * The unique identifier for the renting transaction.
+	 */
 	private Long id;
+
+	/**
+	 * The starting date of the renting period.
+	 */
 	private LocalDate dateFrom;
+
+	/**
+	 * The ending date of the renting period.
+	 */
 	private LocalDate dateTo;
+
+	/**
+	 * The total amount charged for the renting transaction.
+	 */
 	private BigDecimal totalAmount;
+
+	/**
+	 * The currency used for the transaction's amount.
+	 */
 	private Currency currency;
+
+	/**
+	 * The vehicle that is being rented.
+	 */
 	private Vehicle vehicle;
+
+	/**
+	 * The client who is renting the vehicle.
+	 */
 	private Client client;
+
+	/**
+	 * The price list item associated with the renting transaction.
+	 */
 	private PriceListItem priceListItem;
 
 	/**

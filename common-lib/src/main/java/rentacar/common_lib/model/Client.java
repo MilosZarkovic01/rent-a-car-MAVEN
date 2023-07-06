@@ -25,9 +25,24 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 public class Client implements Serializable {
 
+	/**
+	 * The unique identifier for the client.
+	 */
 	private Long id;
+
+	/**
+	 * The first name of the client.
+	 */
 	private String firstName;
+
+	/**
+	 * The last name of the client.
+	 */
 	private String lastName;
+
+	/**
+	 * The telephone number of the client.
+	 */
 	private String telNumber;
 
 	/**

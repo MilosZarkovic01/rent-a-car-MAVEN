@@ -22,12 +22,39 @@ import rentacar.common_lib.model.enumeration.TypeOfPriceListItem;
  */
 public class PriceListItem implements Serializable {
 
+	/**
+	 * The unique identifier for the price list item.
+	 */
 	private Long id;
+
+	/**
+	 * The price list to which this item belongs.
+	 */
 	private PriceList priceList;
+
+	/**
+	 * The price of the item.
+	 */
 	private BigDecimal price;
+
+	/**
+	 * The pdv rate for the item.
+	 */
 	private PDV pdv;
+
+	/**
+	 * The type of the price list item.
+	 */
 	private TypeOfPriceListItem typeOfPriceListItem;
+
+	/**
+	 * The currency of the item's price.
+	 */
 	private Currency currency;
+
+	/**
+	 * The type of vehicle associated with the item.
+	 */
 	private TypeOfVehicle typeOfVehicle;
 
 	/**

@@ -21,7 +21,14 @@ import java.util.Objects;
  */
 public class TypeOfVehicle implements Serializable {
 
+	/**
+	 * The unique identifier for the type of vehicle.
+	 */
 	private Long id;
+
+	/**
+	 * The name of the type of vehicle.
+	 */
 	private String name;
 
 	/**

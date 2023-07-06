@@ -22,9 +22,24 @@ import java.util.Objects;
  */
 public class PriceList implements Serializable {
 
+	/**
+	 * The unique identifier for the price list.
+	 */
 	private Long id;
+
+	/**
+	 * The starting date of the price list's validity.
+	 */
 	private LocalDate validFrom;
+
+	/**
+	 * The ending date of the price list's validity.
+	 */
 	private LocalDate validTo;
+
+	/**
+	 * The list of price list items associated with this price list.
+	 */
 	private List<PriceListItem> priceListItems;
 
 	/**

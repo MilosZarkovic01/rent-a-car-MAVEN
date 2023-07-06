@@ -17,8 +17,15 @@ import java.util.Objects;
  */
 public class PDV implements Serializable {
 
-	private Long id;
-	private double percent;
+    /**
+     * The unique identifier for the pdv rate.
+     */
+    private Long id;
+
+    /**
+     * The percentage value of the pdv rate.
+     */
+    private double percent;
 
 	/**
 	 * 
